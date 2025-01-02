@@ -1,28 +1,23 @@
-```markdown
 # Sentiment Analysis API
 
-This API provides sentiment analysis for Marathi tweets. It takes a tweet as input and returns the original tweet, a cleaned version of the tweet, and predicted probabilities for Negative, Neutral, and Positive sentiments.
+This API analyzes the sentiment of Marathi tweets.  
 
-## Endpoint
+### **Endpoint**:  
+`https://sohel1807--sentiment-analysis.modal.run`  
 
-**POST**: `https://sohel1807--sentiment-analysis.modal.run`
+### **Method**:  
+POST  
 
-### Request
-
-- **Content-Type**: `application/json`
-- **Body**:
-  ```json
-  {
-     "tweet":"मी खूप आनंदी आहे . "
+### **Input**:  
+```json
+{
+ "tweet":"मी खूप आनंदी आहे . "
  }
-  ```
+```  
 
-### Response
-
-- **Content-Type**: `application/json`
-- **Body**:
-  ```json
-  {
+### **Output**:  
+```json
+{
   "original_tweet": "मी खूप आनंदी आहे . ",
   "cleaned_tweet": "म खप आनद आह  ",
   "predicted_probabilities": {
@@ -31,8 +26,3 @@ This API provides sentiment analysis for Marathi tweets. It takes a tweet as inp
     "Positive": 0.9756266429269854
   }
 }
-  ```
-
-## Example Usage
-
-Send a POST request with the tweet in JSON format to get the sentiment analysis.
