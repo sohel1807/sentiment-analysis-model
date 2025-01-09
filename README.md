@@ -1,4 +1,4 @@
-# Sentiment Analysis API
+# Sentiment Analysis For Marathi Language API
 
 This API analyzes the sentiment of Marathi tweets.  
 
