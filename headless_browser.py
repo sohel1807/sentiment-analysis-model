@@ -40,7 +40,7 @@ playwright_image = Image.debian_slim(python_version="3.11").run_commands(
 
 app = App(name="Headless", image=playwright_image)
 
-@app.function(keep_warm=5)
+@app.function(keep_warm=0)
 @web_endpoint(label="scrape-facebook-post", method="POST")
 async def get_facebook_comments(credentials: Dict):
     # Extract login credentials and the post URL from the input
