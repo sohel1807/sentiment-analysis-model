@@ -46,7 +46,7 @@ def predict_sentiment(info: Dict):
 
     # Check the number of classes and format the output
     probabilities = {}
-    class_labels = ["Negative", "Neutral", "Positive"]  # Adjust based on your model's class labels
+    class_labels = ["Negative", "Neutral", "Positive"] # Adjust based on your model's class labels
     for i, prob in enumerate(predicted_probs):
         probabilities[class_labels[i]] = prob
 
@@ -54,5 +54,7 @@ def predict_sentiment(info: Dict):
     return {
         "original_tweet": text,
         "cleaned_tweet": cleaned_text[0],
+        "Sentiment_Analysis":max(probabilities,key=probabilities.get),
         "predicted_probabilities": probabilities
+    
     }
